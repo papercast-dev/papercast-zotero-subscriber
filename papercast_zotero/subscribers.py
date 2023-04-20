@@ -3,13 +3,13 @@ from typing import Any, AsyncIterable, Dict, List
 
 import requests
 import time
-from papercast_zotero.zotero_types import ZoteroOutput
+from papercast_zotero.types import ZoteroOutput
 from pyzotero import zotero
 from websockets.client import connect
 
 from papercast.base import BaseSubscriber
 from papercast.production import Production
-from papercast.types import PDFFile
+from papercast.types import PDFFile  # type: ignore
 
 
 class ZoteroSubscriber(BaseSubscriber):
